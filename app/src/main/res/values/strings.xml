@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IsenSmartDevice</string>
+    <string name="title_activity_scan">ScanActivity</string>
+    <string name="title_activity_device_detail">DeviceDetailActivity</string>
+</resources>
