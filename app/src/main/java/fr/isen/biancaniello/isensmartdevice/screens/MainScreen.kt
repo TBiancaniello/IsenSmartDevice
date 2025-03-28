@@ -32,8 +32,8 @@ fun MainScreen() {
             .background(
                 Brush.verticalGradient(
                 colors = listOf(Color(0xFF64A9E4), Color(0xFF76BEFA))
-            )) // Fond dégradé
-            .padding(24.dp), // Espacement global
+            ))
+            .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceAround
     ) {
@@ -76,8 +76,8 @@ fun MainScreen() {
             modifier = Modifier
                 .padding(8.dp)
                 .fillMaxWidth()
-                .height(56.dp), // Taille plus grande pour le bouton
-            shape = RoundedCornerShape(50), // Bordure arrondie
+                .height(56.dp),
+            shape = RoundedCornerShape(50),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0077FF))
         ) {
             Text(
@@ -88,7 +88,7 @@ fun MainScreen() {
             )
         }
 
-        // Information de support (facultative)
+        // Information de support
         Text(
             text = "Assurez-vous que vos appareils BLE sont allumés et à portée.",
             fontSize = 14.sp,

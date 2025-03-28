@@ -55,7 +55,7 @@ fun ScanScreen(
             modifier = Modifier
                 .padding(innerPadding)
                 .fillMaxSize()
-                .background(Color(0xFF76BEFA)) // Fond bleu
+                .background(Color(0xFF76BEFA))
                 .padding(16.dp)
         ) {
             Row(
@@ -83,7 +83,7 @@ fun ScanScreen(
 
             Divider(modifier = Modifier.padding(bottom = 12.dp), color = Color.White)
 
-            // Barre de recherche
+
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
@@ -104,7 +104,7 @@ fun ScanScreen(
             )
 
 
-            // Affichage du nombre d'appareils détectés
+
             Text(
                 text = "${filteredDevices.size} appareils détectés",
                 color = Color.White,

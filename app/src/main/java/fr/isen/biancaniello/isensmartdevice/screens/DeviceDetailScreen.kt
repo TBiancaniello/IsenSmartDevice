@@ -34,11 +34,11 @@ fun DeviceDetailScreen(
     counterButton3: Int,
     onResetCounter: () -> Unit
 ) {
-    // Modification des couleurs des LEDs en couleurs pastel (bleu, vert et rouge)
+
     val ledColors = listOf(
-        Color(0xFF80D0FF), // LED 1 - Bleu pastel
-        Color(0xFFB2F7A0), // LED 2 - Vert pastel
-        Color(0xFFF9A1A1)  // LED 3 - Rouge pastel
+        Color(0xFF80D0FF),
+        Color(0xFFB2F7A0),
+        Color(0xFFF9A1A1)
     )
 
     Scaffold(
@@ -61,13 +61,13 @@ fun DeviceDetailScreen(
             modifier = Modifier
                 .padding(innerPadding)
                 .fillMaxSize()
-                .background(Color(0xFF76BEFA)), // Fond bleu #76BEFA
+                .background(Color(0xFF76BEFA)),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             if (!isConnected) {
                 Spacer(modifier = Modifier.height(32.dp))
 
-                // Card autour des informations avec un cadre blanc
+
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -92,7 +92,6 @@ fun DeviceDetailScreen(
 
                 Spacer(modifier = Modifier.height(32.dp))
 
-                // Bouton sans Card autour
                 Button(
                     onClick = onConnectClick,
                     modifier = Modifier
@@ -108,7 +107,7 @@ fun DeviceDetailScreen(
                 Text("Contrôlez vos LEDs à distance! ", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Color(0xFF1976D2))
 
 
-                // Réorganiser les boutons LED de haut en bas
+
                 Column(
                     modifier = Modifier
                         .padding(vertical = 24.dp)
@@ -124,15 +123,15 @@ fun DeviceDetailScreen(
                             ),
                             modifier = Modifier
                                 .height(64.dp)
-                                .fillMaxWidth() // Les boutons prennent toute la largeur de l'écran
+                                .fillMaxWidth()
                         ) {
                             Text(
-                                text = "Guirlande ${index + 1}",
+                                text = "LED ${index + 1}",
                                 color = Color.White,
                                 maxLines = 1
                             )
                         }
-                        Spacer(modifier = Modifier.height(16.dp)) // Espace entre les boutons
+                        Spacer(modifier = Modifier.height(16.dp))
                     }
                 }
 
@@ -140,7 +139,7 @@ fun DeviceDetailScreen(
                 Divider(modifier = Modifier.padding(horizontal = 16.dp))
                 Spacer(modifier = Modifier.height(8.dp))
 
-                // ✅ Abonnements séparés
+
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically
